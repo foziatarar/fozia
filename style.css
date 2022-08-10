@@ -1,0 +1,383 @@
+/* google fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner:wght@400;500;600&family=Teko:wght@300&display=swap');
+
+
+/* universal settins */
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+:root{
+
+    --color-primary: #fbe4ff;
+    --color-success: #00bf8e;
+    --color-warning: #f7c94b;
+    --color-danger: #f75842;
+    --color-danger-variant: rgba(247, 88, 66, 0.4);
+    --color-white: #fff;
+    --color-light: rgba(255, 255, 255, 0.7);
+    --color-black: #0000;
+    --color-bg: #0a0a0b;
+    --color-bg1: #2e3267;
+    --color-bg2: #424890;
+
+    --container-width-lg: 76%;
+    --container-width-md: 90%;
+    --container-width-sm: 94%;
+
+    --transition: all 400ms ease;
+}
+
+body{
+    font-family: 'Edu VIC WA NT Beginner', cursive;
+    line-height: 1.7;
+    color: var(--color-white);
+    background: var(--color-bg);
+}
+
+.container{
+    width: var(--container-width-lg);
+    margin: 0 auto;
+}
+
+section{
+    padding: 6rem 0;
+    margin-bottom: 4rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+    line-height: 1.2;
+}
+
+h1{
+    font-size: 2.4rem;
+}
+
+h2{
+    font-size: 2rem;
+}
+
+h3{
+    font-size: 1.6;
+}
+
+h4{
+    font-size: 1.3rem;
+}
+
+a{
+    color: var(--color-white);
+}
+
+img{
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.btn{
+    display: inline-block;
+    background: rgb(49, 39, 63);
+    color: var(--color-bg);
+    padding: 1rem 2rem;
+    border: 1px solid transparent;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.btn:hover{
+    background: transparent;
+    color: var(--color-white);
+    border-color: var(--color-white);
+}
+
+.btn-primary{
+    background: var(--color-danger);
+    color: var(--color-white);
+}
+
+/*:::::::::::: nav:::::::::::: */
+
+nav{
+    background: rgb(49, 39, 63);
+    box-shadow: 0 5px 6px rgba(74, 77, 77, 0.2);
+    width: 100vw;
+    height: 5rem;
+    position: fixed;
+    top: 0;
+    z-index: 11;
+}
+
+.conNav{
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+span{
+    color: #f7c94b;
+}
+
+nav button{
+    display: none;
+}
+
+.nmenu{
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+
+.nmenu a{
+    font-size: 0.9rem;
+    transition: var(--transition);
+}
+
+.nmenu a:hover{
+    color: var(--color-warning);
+}
+
+/* *****************************header************************** */
+
+header{
+    position: relative;
+    top: 10rem;
+    overflow: hidden;
+    height: 70vh;
+    margin-bottom: 5rem;
+}
+
+
+.head1{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 5rem;
+    height: 100%;
+}
+
+.headl p{
+    margin: 1rem 0 2.4rem;
+}
+
+.headl button{
+    border-radius: 50%;
+}
+
+/* ************project section *********** */
+
+
+.card {
+   top: 10rem;
+   position: relative;
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: stretch;
+   gap: 20px;
+   flex-wrap: wrap;
+  }
+
+.card .skill{
+    position: relative;
+    width: 30%;
+    min-height: 100%;
+    background: var(--color-bg1);
+    border-radius: 20px;
+}
+
+.card .skill .icon{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background: #555b9b;
+    transition: 0.5s;
+    display: flex;
+    justify-content: center;
+
+    align-items: center;
+}
+
+.card .skill:hover .icon{
+    top: 30px;
+    left: calc(50% - 40px);
+    width: 80px;
+    height: 80px;
+    border: 50px;
+    border-radius: 50px;
+    transition-delay: 0s;
+}
+.card .skill .icon i{
+    font-size: 6rem;
+    transition: 0.5s;
+    color: rgb(49, 39, 63);
+}
+
+.card .skill:hover .icon i{
+    font-size: 2em;
+    color: #fbe4ff;
+}
+
+.card .skill .general{
+    position: relative;
+    padding: 20px;
+    text-align: center;
+    margin-top: 100px;
+    z-index: 1;
+    transform: scale(0);
+    transition: 0.5s;
+    transition-delay: 0s;
+}
+
+.card .skill:hover .general{
+    transform: scale(1);
+    transition-delay: 0s;
+}
+.card .skill .general h1{
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-size: 1.7rem;
+    color: #f7c94b;
+}
+
+/* portfolio section  */
+
+
+/* linebreak */
+/* 
+.lines{
+    margin-top: 10rem;
+    z-index: 100;
+}
+
+.lines hr.r1{
+    color: rgb(255, 104, 104);
+}
+
+.lines hr .r2{
+    color: rgb(255, 167, 104);
+}
+.lines hr .r3{
+    color: rgb(255, 245, 104);
+}
+.lines hr .r4{
+    color: rgb(109, 255, 104);
+}
+.r5{
+    color: rgb(104, 255, 250);
+}
+.r6{
+    color: rgb(112, 104, 255);
+}
+.r7{
+    color: rgb(252, 104, 255);
+} */
+
+.lines{
+    margin-top: 14rem;
+    z-index: 100;
+}
+
+hr.r1 {
+    display: block;
+    height: 0;
+    border: 0;
+    border-top: 2px solid rgb(255, 104, 104);
+    margin: 0;
+    padding: 0;
+  }
+  hr.r2 {
+    display: block;
+    height: 0;
+    border: 0;
+    border-top: 2px solid rgb(255, 167, 104);
+    margin: 0;
+    padding: 0;
+  }
+  hr.r3 {
+    display: block;
+    height: 0;
+    border: 0;
+    border-top: 2px solid rgb(255, 245, 104);
+    margin: 0;
+    padding: 0;
+  }
+  hr.r4 {
+    display: block;
+    height: 0;
+    border: 0;
+    border-top: 2px solid rgb(109, 255, 104);
+    margin: 0;
+    padding: 0;
+  }
+  hr.r5 {
+    display: block;
+    height: 0;
+    border: 0;
+    border-top: 2px solid rgb(104, 255, 250);
+    margin: 0;
+    padding: 0;
+  }
+  hr.r6 {
+    display: block;
+    height: 0;
+    border: 0;
+    border-top: 2px solid rgb(119, 104, 255);
+    margin: 0;
+    padding: 0;
+  }
+  hr.r7 {
+    display: block;
+    height: 0;
+    border: 0;
+    border-top: 2px solid rgb(252, 104, 255);
+    margin: 0;
+    padding: 0;
+  }
+
+  /* footer  */
+
+  .ficon {
+    text-align: center;
+    margin-top: 0;
+    position: center;
+    background-color: var(--color-bg);
+
+}
+
+.sicons {
+    font-size: 1.8rem;
+    line-height: 1.8rem;  
+    background-color: #000000;
+    padding: 3px;
+    margin: 20px;
+    width: 35px;
+    height: 35px;
+    border-radius: 30px;
+    text-align: center;
+    display: inline-block;
+    -webkit-transition: 2s;
+    transition: 2s;
+    cursor: pointer;
+}
+.sicons:hover {
+    background-color: #ffffff;
+    color: #000;
+    transition: 2s;
+}
